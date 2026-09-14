@@ -1,11 +1,3 @@
-/* ============================================================
-   HOGAR INSPIRA — Hoja de estilos compartida
-   Identidad visual conservada del diseño original.
-   ============================================================ */
-
-/* ------------------------------------------------------------
-   1. VARIABLES Y RESET
-   ------------------------------------------------------------ */
 :root{
   --bg:#FDFBF7;
   --surface:#FFFFFF;
@@ -21,7 +13,7 @@
   --shadow-sm:0 2px 10px rgba(32,30,27,.05);
   --shadow-md:0 16px 44px rgba(32,30,27,.12);
   --max:1200px;
-  --font-title:"Playfair Display", Georgia, "Times New Roman", serif;
+  --font-title:"Playfair Display", Georgia, serif;
   --font-body:"DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -80,9 +72,6 @@ button,input,textarea{ font:inherit; color:inherit; }
 }
 .skip-link:focus{ left:0; }
 
-/* ------------------------------------------------------------
-   2. LAYOUT GENERAL
-   ------------------------------------------------------------ */
 .container{
   width:100%;
   max-width:var(--max);
@@ -99,11 +88,8 @@ button,input,textarea{ font:inherit; color:inherit; }
   text-align:center;
 }
 .section-head h2{ font-size:clamp(1.7rem, 6vw, 2.5rem); }
-.section-head p{
-  margin-top:14px;
-  color:var(--muted);
-  font-size:1rem;
-}
+.section-head p{ margin-top:14px; color:var(--muted); font-size:1rem; }
+
 .section-label{
   display:block;
   font-size:.68rem;
@@ -115,26 +101,18 @@ button,input,textarea{ font:inherit; color:inherit; }
 }
 
 .grid{ display:grid; gap:20px; }
-.grid--cats,
-.grid--3,
-.grid--2{ grid-template-columns:1fr; }
+.grid--3{ grid-template-columns:1fr; }
 
 @media (min-width:620px){
   .grid{ gap:24px; }
-  .grid--cats,
-  .grid--3,
-  .grid--2{ grid-template-columns:repeat(2, 1fr); }
+  .grid--3{ grid-template-columns:repeat(2, 1fr); }
 }
 @media (min-width:1024px){
-  .grid--cats,
   .grid--3{ grid-template-columns:repeat(3, 1fr); }
   .section{ padding:84px 0; }
   .section--tight{ padding:68px 0; }
 }
 
-/* ------------------------------------------------------------
-   3. BOTONES
-   ------------------------------------------------------------ */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -169,9 +147,6 @@ button,input,textarea{ font:inherit; color:inherit; }
   transform:translateY(-2px);
 }
 
-/* ------------------------------------------------------------
-   4. HEADER
-   ------------------------------------------------------------ */
 .site-header{
   position:sticky;
   top:0;
@@ -273,9 +248,6 @@ button,input,textarea{ font:inherit; color:inherit; }
   .nav-desktop a:hover::after{ transform:scaleX(1); }
 }
 
-/* ------------------------------------------------------------
-   5. HERO (portada)
-   ------------------------------------------------------------ */
 .hero{ padding:28px 0 8px; }
 .hero__grid{ display:grid; gap:30px; align-items:center; }
 .hero__eyebrow{
@@ -315,86 +287,6 @@ button,input,textarea{ font:inherit; color:inherit; }
   .hero__grid{ grid-template-columns:1fr 1fr; gap:56px; }
 }
 
-/* ------------------------------------------------------------
-   6. BREADCRUMB
-   ------------------------------------------------------------ */
-.breadcrumb{
-  padding:20px 0 0;
-  font-size:.8rem;
-  color:var(--muted);
-}
-.breadcrumb ol{
-  display:flex; flex-wrap:wrap; align-items:center;
-  gap:6px 8px;
-}
-.breadcrumb li{ display:flex; align-items:center; gap:8px; }
-.breadcrumb li + li::before{
-  content:"›"; color:var(--gold); font-size:1rem;
-}
-.breadcrumb a{ color:var(--muted); transition:color .25s ease; }
-.breadcrumb a:hover{ color:var(--accent-dark); }
-.breadcrumb [aria-current="page"]{ color:var(--ink); font-weight:500; }
-
-/* ------------------------------------------------------------
-   7. VALORES
-   ------------------------------------------------------------ */
-.values{
-  display:flex; flex-wrap:wrap; justify-content:center;
-  gap:14px 30px; margin-top:26px;
-}
-.values li{
-  display:flex; align-items:center; gap:10px;
-  font-size:.78rem; letter-spacing:.12em;
-  text-transform:uppercase; color:var(--muted);
-}
-.values li::before{
-  content:""; width:6px; height:6px; border-radius:50%;
-  background:var(--gold); flex:0 0 6px;
-}
-
-/* ------------------------------------------------------------
-   8. TARJETAS DE CATEGORÍA
-   ------------------------------------------------------------ */
-.cat-card{
-  position:relative; display:block;
-  aspect-ratio:4 / 5;
-  border-radius:var(--radius-lg); overflow:hidden;
-  background:var(--warm); box-shadow:var(--shadow-sm);
-  scroll-margin-top:96px;
-}
-.cat-card img{
-  width:100%; height:100%; object-fit:cover;
-  transition:transform .6s cubic-bezier(.2,.7,.3,1);
-}
-.cat-card::after{
-  content:""; position:absolute; inset:0;
-  background:linear-gradient(to top,
-    rgba(24,20,16,.84) 0%,
-    rgba(24,20,16,.38) 46%,
-    rgba(24,20,16,.04) 76%);
-}
-.cat-card__body{
-  position:absolute; left:0; right:0; bottom:0;
-  z-index:2; padding:22px; color:#fff;
-}
-.cat-card__body h3{ font-size:1.38rem; color:#fff; }
-.cat-card__body p{
-  margin-top:8px; font-size:.88rem; line-height:1.55;
-  color:rgba(255,255,255,.86);
-}
-.cat-card__cta{
-  display:inline-flex; align-items:center; gap:8px;
-  margin-top:16px;
-  font-size:.74rem; letter-spacing:.16em;
-  text-transform:uppercase; color:var(--gold);
-  transition:gap .3s ease;
-}
-.cat-card:hover img{ transform:scale(1.06); }
-.cat-card:hover .cat-card__cta{ gap:16px; }
-
-/* ------------------------------------------------------------
-   9. TARJETAS DE ARTÍCULO
-   ------------------------------------------------------------ */
 .card{
   display:flex; flex-direction:column;
   background:var(--surface);
@@ -441,218 +333,6 @@ button,input,textarea{ font:inherit; color:inherit; }
 .card--featured .card__media{ aspect-ratio:4 / 3; }
 .card--featured .card__body h3{ font-size:1.34rem; }
 
-/* Tarjeta "próximamente" */
-.card--soon{ opacity:.72; }
-.card--soon .card__link{ visibility:hidden; }
-.card__soon{
-  display:inline-block; margin-top:auto; padding-top:18px;
-  font-size:.68rem; letter-spacing:.16em; text-transform:uppercase;
-  color:var(--accent);
-}
-
-/* ------------------------------------------------------------
-   10. BLOQUE EDITORIAL
-   ------------------------------------------------------------ */
-.editorial{ background:var(--warm); }
-.editorial__grid{ display:grid; gap:0; }
-.editorial__media{ aspect-ratio:4 / 3; background:#E7DCD0; }
-.editorial__media img{ width:100%; height:100%; object-fit:cover; }
-.editorial__body{
-  display:flex; flex-direction:column; justify-content:center;
-  padding:44px 22px;
-}
-.editorial__body h2{ font-size:clamp(1.8rem, 6.6vw, 2.7rem); }
-.editorial__body p{ margin-top:18px; color:var(--muted); max-width:54ch; }
-.editorial__rule{
-  width:56px; height:2px; background:var(--gold);
-  margin:26px 0 0; border-radius:2px;
-}
-.editorial__firma{
-  margin-top:22px;
-  font-family:var(--font-title);
-  font-style:italic; font-size:1rem; color:var(--ink);
-}
-@media (min-width:900px){
-  .editorial__grid{ grid-template-columns:1fr 1fr; }
-  .editorial__body{ padding:88px 66px; }
-}
-
-/* ------------------------------------------------------------
-   11. PÁGINA DE CATEGORÍA (hero)
-   ------------------------------------------------------------ */
-.page-hero{ padding:20px 0 8px; }
-.page-hero__inner{ max-width:760px; }
-.page-hero h1{ font-size:clamp(2rem, 8vw, 3.2rem); }
-.page-hero p{
-  margin-top:16px; color:var(--muted); font-size:1.05rem;
-}
-.page-hero__media{
-  margin-top:32px;
-  border-radius:var(--radius-lg); overflow:hidden;
-  aspect-ratio:16 / 9; background:var(--warm);
-  box-shadow:var(--shadow-sm);
-}
-.page-hero__media img{ width:100%; height:100%; object-fit:cover; }
-
-/* ------------------------------------------------------------
-   12. ARTÍCULO (lectura)
-   ------------------------------------------------------------ */
-.article{ padding:24px 0 0; }
-.article__meta{
-  font-size:.68rem; letter-spacing:.2em;
-  text-transform:uppercase; color:var(--accent);
-  font-weight:500;
-}
-.article h1{
-  font-size:clamp(1.9rem, 7.5vw, 3rem);
-  margin-top:12px; line-height:1.14;
-}
-.article__intro{
-  margin-top:22px; font-size:1.08rem; color:var(--ink);
-}
-.article__intro p + p{ margin-top:16px; }
-
-.article__hero{
-  margin:32px 0;
-  border-radius:var(--radius-lg); overflow:hidden;
-  aspect-ratio:16 / 10; background:var(--warm);
-  box-shadow:var(--shadow-sm);
-}
-.article__hero img{ width:100%; height:100%; object-fit:cover; }
-
-.article__body{
-  max-width:720px; margin:0 auto; padding:0 18px;
-}
-.article__content{
-  font-size:1.05rem; line-height:1.8; color:var(--ink);
-}
-.article__content > * + *{ margin-top:22px; }
-.article__content h2{
-  font-size:clamp(1.4rem, 5vw, 1.9rem);
-  margin-top:48px; line-height:1.2;
-}
-.article__content h2 + *{ margin-top:18px; }
-.article__content h3{
-  font-size:clamp(1.15rem, 4vw, 1.35rem);
-  margin-top:32px; line-height:1.3;
-}
-.article__content h3 + *{ margin-top:14px; }
-.article__content p{ color:#3A3632; }
-.article__content ul,
-.article__content ol{
-  padding-left:24px; color:#3A3632;
-}
-.article__content ul{ list-style:disc; }
-.article__content ol{ list-style:decimal; }
-.article__content li + li{ margin-top:8px; }
-.article__content li::marker{ color:var(--accent); }
-.article__content a{
-  color:var(--accent-dark);
-  border-bottom:1px solid var(--gold);
-  transition:color .25s ease, border-color .25s ease;
-}
-.article__content a:hover{ color:var(--ink); border-color:var(--ink); }
-.article__content strong{ color:var(--ink); font-weight:700; }
-.article__content blockquote{
-  border-left:3px solid var(--gold);
-  padding:6px 0 6px 22px;
-  font-family:var(--font-title);
-  font-style:italic; font-size:1.2rem; color:var(--ink);
-}
-
-/* Figuras dentro del artículo */
-.article__figure{ margin:32px 0; }
-.article__figure img{
-  width:100%; border-radius:var(--radius);
-  background:var(--warm);
-}
-.article__figure figcaption{
-  margin-top:10px; font-size:.82rem; color:var(--muted);
-  text-align:center; font-style:italic;
-}
-
-/* Bloque Pinterest vertical (2:3) */
-.pin-vertical{ margin:40px auto; max-width:420px; }
-.pin-vertical__frame{
-  aspect-ratio:2 / 3;
-  border-radius:var(--radius-lg); overflow:hidden;
-  background:var(--warm);
-  box-shadow:var(--shadow-md);
-}
-.pin-vertical__frame img{ width:100%; height:100%; object-fit:cover; }
-.pin-vertical figcaption{
-  margin-top:12px; font-size:.82rem; color:var(--muted);
-  text-align:center;
-}
-.pin-save{
-  display:inline-flex; align-items:center; gap:8px;
-  margin-top:14px; padding:10px 18px;
-  background:var(--ink); color:var(--bg);
-  border-radius:999px; font-size:.82rem; font-weight:500;
-  transition:background-color .25s ease, transform .25s ease;
-}
-.pin-save:hover{ background:var(--accent-dark); transform:translateY(-2px); }
-
-/* FAQ */
-.faq{ margin-top:48px; }
-.faq details{
-  border-bottom:1px solid var(--line);
-  padding:18px 0;
-}
-.faq summary{
-  cursor:pointer;
-  font-family:var(--font-title);
-  font-size:1.1rem; font-weight:600;
-  list-style:none;
-  display:flex; justify-content:space-between;
-  align-items:center; gap:16px;
-}
-.faq summary::-webkit-details-marker{ display:none; }
-.faq summary::after{
-  content:"+"; font-size:1.4rem; color:var(--accent);
-  transition:transform .3s ease;
-}
-.faq details[open] summary::after{ transform:rotate(45deg); }
-.faq details p{ margin-top:12px; color:var(--muted); }
-
-/* Bloque destacado dentro del artículo */
-.article__note{
-  background:var(--warm);
-  border-radius:var(--radius);
-  padding:22px 24px;
-  font-size:.98rem;
-  color:var(--ink);
-}
-.article__note strong{ color:var(--accent-dark); }
-
-/* ------------------------------------------------------------
-   13. ARTÍCULOS RELACIONADOS
-   ------------------------------------------------------------ */
-.related{
-  background:var(--warm);
-  padding:64px 0;
-  margin-top:64px;
-}
-.related .section-head{ margin-bottom:34px; }
-
-/* ------------------------------------------------------------
-   14. PINTEREST CTA
-   ------------------------------------------------------------ */
-.pinterest__inner{
-  max-width:720px; margin:0 auto;
-  padding:46px 24px; text-align:center;
-  background:var(--surface);
-  border:1px solid var(--line);
-  border-radius:var(--radius-lg);
-  box-shadow:var(--shadow-sm);
-}
-.pinterest__inner h2{ font-size:clamp(1.6rem, 5.6vw, 2.2rem); }
-.pinterest__inner p{ margin-top:14px; color:var(--muted); }
-.pinterest__inner .btn{ margin-top:26px; }
-
-/* ------------------------------------------------------------
-   15. NEWSLETTER
-   ------------------------------------------------------------ */
 .newsletter{ background:var(--ink); color:#F6F1EA; padding:64px 0; }
 .newsletter__inner{ max-width:640px; margin:0 auto; text-align:center; }
 .newsletter h2{ color:#fff; font-size:clamp(1.7rem, 6vw, 2.4rem); }
@@ -692,52 +372,6 @@ button,input,textarea{ font:inherit; color:inherit; }
   .newsletter .btn{ flex:0 0 auto; }
 }
 
-/* ------------------------------------------------------------
-   16. FORMULARIO DE CONTACTO
-   ------------------------------------------------------------ */
-.contact-form{
-  max-width:560px;
-  display:flex; flex-direction:column; gap:16px;
-}
-.contact-form label{
-  font-size:.82rem; letter-spacing:.1em;
-  text-transform:uppercase; color:var(--muted);
-  margin-bottom:6px; display:block;
-}
-.contact-form input,
-.contact-form textarea{
-  width:100%; padding:14px 18px;
-  border:1px solid var(--line); border-radius:12px;
-  background:var(--surface);
-  transition:border-color .25s ease, box-shadow .25s ease;
-}
-.contact-form input:focus,
-.contact-form textarea:focus{
-  outline:none; border-color:var(--accent);
-  box-shadow:0 0 0 3px rgba(176,122,92,.18);
-}
-.contact-form textarea{ min-height:160px; resize:vertical; }
-
-/* ------------------------------------------------------------
-   17. PÁGINAS LEGALES / TEXTO
-   ------------------------------------------------------------ */
-.legal{ padding:24px 0 64px; }
-.legal__body{ max-width:760px; margin:0 auto; padding:0 18px; }
-.legal h1{ font-size:clamp(1.9rem, 7vw, 2.8rem); }
-.legal h2{
-  font-size:clamp(1.25rem, 4.5vw, 1.55rem);
-  margin-top:40px;
-}
-.legal p, .legal li{ color:#3A3632; }
-.legal p{ margin-top:14px; }
-.legal ul{ list-style:disc; padding-left:24px; margin-top:12px; }
-.legal li + li{ margin-top:6px; }
-.legal li::marker{ color:var(--accent); }
-.legal a{ color:var(--accent-dark); border-bottom:1px solid var(--gold); }
-
-/* ------------------------------------------------------------
-   18. FOOTER
-   ------------------------------------------------------------ */
 .site-footer{
   background:#1B1917; color:rgba(255,255,255,.7);
   padding:56px 0 26px;
@@ -773,9 +407,6 @@ button,input,textarea{ font:inherit; color:inherit; }
   .footer-grid{ grid-template-columns:1.5fr 1fr 1fr; gap:40px; }
 }
 
-/* ------------------------------------------------------------
-   19. ANIMACIÓN DE APARICIÓN
-   ------------------------------------------------------------ */
 .reveal-ready .reveal{
   opacity:0; transform:translateY(18px);
   transition:opacity .65s ease, transform .65s ease;
@@ -784,9 +415,6 @@ button,input,textarea{ font:inherit; color:inherit; }
   opacity:1; transform:none;
 }
 
-/* ------------------------------------------------------------
-   20. ACCESIBILIDAD: REDUCCIÓN DE MOVIMIENTO
-   ------------------------------------------------------------ */
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
   *,*::before,*::after{

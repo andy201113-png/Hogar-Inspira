@@ -1,13 +1,7 @@
-/* ============================================================
-   HOGAR INSPIRA — JavaScript compartido
-   1. Menú móvil (abrir/cerrar)
-   2. Cierre al pulsar enlace, Escape o pasar a escritorio
-   3. Aparición suave de elementos (.reveal)
-   ============================================================ */
 (function () {
   'use strict';
 
-  /* ---------- 1 y 2. MENÚ MÓVIL ---------- */
+  /* ---------- MENÚ MÓVIL ---------- */
   var toggle = document.getElementById('menuToggle');
   var mobileNav = document.getElementById('mobileNav');
 
@@ -47,7 +41,7 @@
     });
   }
 
-  /* ---------- 3. APARICIÓN SUAVE ---------- */
+  /* ---------- APARICIÓN SUAVE ---------- */
   var revealElements = document.querySelectorAll('.reveal');
   var prefiereMenosMovimiento = window.matchMedia &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;

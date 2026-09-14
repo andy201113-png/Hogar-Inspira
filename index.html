@@ -1,87 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- ============================================================
-     SEO
-     ============================================================ -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hogar Inspira | Ideas para transformar tu hogar</title>
-<meta name="description" content="Hogar Inspira es una revista digital de decoración con ideas para dormitorios, cocinas, baños, jardines, organización y espacios pequeños. Inspiración real para transformar tu casa.">
+<meta name="description" content="Revista digital de decoración e inspiración para el hogar. Ideas para dormitorios, cocinas y espacios pequeños.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#FDFBF7">
 <link rel="canonical" href="https://hogarinspira.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Hogar Inspira">
 <meta property="og:locale" content="es_ES">
 <meta property="og:title" content="Hogar Inspira | Ideas para transformar tu hogar">
-<meta property="og:description" content="Encuentra ideas, inspiración y pequeños cambios que pueden transformar por completo tus espacios.">
+<meta property="og:description" content="Ideas de decoración, organización y hogar para transformar cada rincón de tu casa.">
 <meta property="og:url" content="https://hogarinspira.com/">
 <meta property="og:image" content="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=70">
-<meta property="og:image:alt" content="Salón moderno y luminoso con sofá claro, mesita de madera y plantas">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="800">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Hogar Inspira | Ideas para transformar tu hogar">
 <meta name="twitter:description" content="Ideas de decoración, organización y hogar para transformar cada rincón de tu casa.">
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=70">
 
-<!-- Fuentes -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-<!-- CSS compartido -->
-<link rel="stylesheet" href="/css/estilos.css">
-
-<!-- JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://hogarinspira.com/#website",
-      "url": "https://hogarinspira.com/",
-      "name": "Hogar Inspira",
-      "description": "Revista digital de inspiración para el hogar: decoración, organización y espacios que se sienten como casa.",
-      "inLanguage": "es",
-      "publisher": { "@id": "https://hogarinspira.com/#organization" }
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://hogarinspira.com/#organization",
-      "name": "Hogar Inspira",
-      "url": "https://hogarinspira.com/",
-      "slogan": "Ideas para transformar tu hogar",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://hogarinspira.com/favicon.svg"
-      }
-    }
-  ]
-}
-</script>
+<link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
-<!-- ADSTERRA — Social Bar (pegar script cuando esté listo) -->
-
-<!-- ============================================================
-     HEADER
-     ============================================================ -->
 <header class="site-header">
   <div class="container">
     <div class="header-bar">
-      <a class="brand" href="/" aria-label="Hogar Inspira — ir al inicio">
+      <a class="brand" href="index.html" aria-label="Hogar Inspira — ir al inicio">
         <span class="brand__mark" aria-hidden="true">HI</span>
         <span class="brand__text">
           <span class="brand__name">Hogar Inspira</span>
@@ -90,12 +45,8 @@
       </a>
 
       <nav class="nav-desktop" aria-label="Navegación principal">
-        <a href="/">Inicio</a>
-        <a href="/dormitorios/">Dormitorios</a>
-        <a href="/cocinas/">Cocinas</a>
-        <a href="/banos/">Baños</a>
-        <a href="/jardines/">Jardines</a>
-        <a href="/organizacion/">Organización</a>
+        <a href="#dormitorios">Dormitorios</a>
+        <a href="#cocinas">Cocinas</a>
       </nav>
 
       <button class="menu-toggle" id="menuToggle" type="button"
@@ -108,364 +59,116 @@
 
   <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
     <ul>
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/dormitorios/">Dormitorios</a></li>
-      <li><a href="/cocinas/">Cocinas</a></li>
-      <li><a href="/banos/">Baños</a></li>
-      <li><a href="/jardines/">Jardines</a></li>
-      <li><a href="/organizacion/">Organización</a></li>
-      <li><a href="/espacios-pequenos/">Espacios pequeños</a></li>
+      <li><a href="#dormitorios">Dormitorios</a></li>
+      <li><a href="#cocinas">Cocinas</a></li>
     </ul>
   </nav>
 </header>
 
 <main id="contenido">
 
-  <!-- ============================================================
-       HERO
-       ============================================================ -->
-  <section class="hero" id="inicio">
+  <section class="hero">
     <div class="container">
       <div class="hero__grid">
         <div class="hero__content">
           <span class="hero__eyebrow">Revista de decoración</span>
           <h1>Haz de tu hogar tu lugar favorito.</h1>
           <p class="hero__text">
-            Encuentra ideas, inspiración y pequeños cambios que pueden transformar
-            por completo tus espacios.
+            Ideas, inspiración y pequeños cambios que transforman tus espacios.
+            Sin obras, sin grandes presupuestos.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="/dormitorios/">Explorar ideas</a>
-            <a class="btn btn--outline" href="/dormitorios/dormitorios-pequenos-modernos.html">Artículo destacado</a>
+            <a class="btn btn--primary" href="#dormitorios">Explorar ideas</a>
           </div>
         </div>
 
         <div class="hero__media">
-          <!-- IMAGEN PROVISIONAL (Unsplash) — sustituir por imagen propia -->
           <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=70"
                alt="Salón moderno y luminoso con sofá claro, mesita de madera y plantas junto a la ventana"
-               width="900" height="1125"
-               fetchpriority="high" decoding="async">
-          <p class="hero__badge">Ideas nuevas cada semana para tu casa</p>
+               width="900" height="1125" fetchpriority="high" decoding="async">
+          <p class="hero__badge">Ideas nuevas cada semana</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ADSTERRA — Popunder (pegar script si se decide usar) -->
-
-  <!-- ============================================================
-       INTRODUCCIÓN
-       ============================================================ -->
-  <section class="section" aria-labelledby="intro-title">
+  <section class="section" id="dormitorios" aria-labelledby="dorm-title">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-label">Bienvenido a Hogar Inspira</span>
-        <h2 id="intro-title">Ideas para espacios que se sienten como hogar</h2>
-        <p>
-          Descubre inspiración para decorar, organizar y transformar cada rincón de tu casa.
-          Desde dormitorios acogedores hasta cocinas modernas, encuentra ideas que puedas
-          adaptar a tu propio estilo.
-        </p>
-        <ul class="values">
-          <li>Ideas prácticas</li>
-          <li>Inspiración visual</li>
-          <li>Para todos los presupuestos</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       CATEGORÍAS
-       ============================================================ -->
-  <section class="section section--tight" id="categorias" aria-labelledby="cats-title">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-label">Categorías</span>
-        <h2 id="cats-title">Explora por espacio</h2>
-        <p>Encuentra inspiración concreta para cada rincón de tu casa.</p>
-      </div>
-
-      <div class="grid grid--cats reveal">
-
-        <a class="cat-card" href="/dormitorios/">
-          <!-- IMAGEN PROVISIONAL (Unsplash) -->
-          <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=70"
-               alt="Dormitorio luminoso con cama vestida en tonos claros y mesitas de noche de madera"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <span class="cat-card__body">
-            <h3>Dormitorios</h3>
-            <p>Espacios para descansar y desconectar.</p>
-            <span class="cat-card__cta">Ver ideas <span aria-hidden="true">→</span></span>
-          </span>
-        </a>
-
-        <a class="cat-card" href="/cocinas/">
-          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=70"
-               alt="Cocina moderna con encimera de mármol, armarios blancos y utensilios de madera"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <span class="cat-card__body">
-            <h3>Cocinas</h3>
-            <p>Ideas modernas, prácticas y acogedoras.</p>
-            <span class="cat-card__cta">Ver ideas <span aria-hidden="true">→</span></span>
-          </span>
-        </a>
-
-        <a class="cat-card" href="/banos/">
-          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=70"
-               alt="Baño pequeño y elegante con espejo redondo, lavabo blanco y toallas de algodón"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <span class="cat-card__body">
-            <h3>Baños</h3>
-            <p>Pequeños cambios que hacen una gran diferencia.</p>
-            <span class="cat-card__cta">Ver ideas <span aria-hidden="true">→</span></span>
-          </span>
-        </a>
-
-        <a class="cat-card" href="/jardines/">
-          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=70"
-               alt="Jardín verde con plantas y flores junto a una fachada blanca"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <span class="cat-card__body">
-            <h3>Jardines</h3>
-            <p>Espacios exteriores llenos de vida.</p>
-            <span class="cat-card__cta">Ver ideas <span aria-hidden="true">→</span></span>
-          </span>
-        </a>
-
-        <a class="cat-card" href="/organizacion/">
-          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=70"
-               alt="Estantería ordenada con libros, cestas de mimbre y objetos decorativos"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <span class="cat-card__body">
-            <h3>Organización</h3>
-            <p>Ideas para ordenar sin perder estilo.</p>
-            <span class="cat-card__cta">Ver ideas <span aria-hidden="true">→</span></span>
-          </span>
-        </a>
-
-        <a class="cat-card" href="/espacios-pequenos/">
-          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=70"
-               alt="Salón pequeño con sofá gris, cojines claros y mesa baja de madera"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <span class="cat-card__body">
-            <h3>Espacios pequeños</h3>
-            <p>Grandes ideas para pocos metros.</p>
-            <span class="cat-card__cta">Ver ideas <span aria-hidden="true">→</span></span>
-          </span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       ARTÍCULOS DESTACADOS
-       ============================================================ -->
-  <section class="section" id="destacados" aria-labelledby="featured-title">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-label">Lo más guardado</span>
-        <h2 id="featured-title">Inspiración que está conquistando Pinterest</h2>
-        <p>Los artículos que más veces se guardan para volver a ellos más tarde.</p>
-      </div>
-
-      <div class="grid grid--3 reveal">
-
-        <article class="card card--featured">
-          <a class="card__media" href="/dormitorios/dormitorios-pequenos-modernos.html" aria-hidden="true" tabindex="-1">
-            <!-- IMAGEN PROVISIONAL -->
-            <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=900&q=70"
-                 alt="Dormitorio pequeño moderno con cama baja, ropa de cama blanca y luz natural"
-                 width="900" height="675" loading="lazy" decoding="async">
-          </a>
-          <div class="card__body">
-            <span class="card__cat">Dormitorios</span>
-            <h3>
-              <a href="/dormitorios/dormitorios-pequenos-modernos.html">
-                27 dormitorios pequeños modernos que parecen de revista
-              </a>
-            </h3>
-            <p>
-              Descubre ideas inteligentes para aprovechar cada centímetro y conseguir
-              un dormitorio moderno, bonito y acogedor.
-            </p>
-            <a class="card__link" href="/dormitorios/dormitorios-pequenos-modernos.html">
-              Leer artículo <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card card--featured">
-          <a class="card__media" href="/dormitorios/dormitorios-beige.html" aria-hidden="true" tabindex="-1">
-            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=900&q=70"
-                 alt="Dormitorio en tonos beige con cabecero tapizado y textiles cálidos"
-                 width="900" height="675" loading="lazy" decoding="async">
-          </a>
-          <div class="card__body">
-            <span class="card__cat">Dormitorios</span>
-            <h3>
-              <a href="/dormitorios/dormitorios-beige.html">
-                Dormitorios beige: una combinación cálida y elegante
-              </a>
-            </h3>
-            <p>
-              El beige nunca falla: descubre cómo combinarlo con madera, lino y
-              detalles dorados para lograr un dormitorio sereno y elegante.
-            </p>
-            <a class="card__link" href="/dormitorios/dormitorios-beige.html">
-              Leer artículo <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card card--featured">
-          <a class="card__media" href="/dormitorios/dormitorios-minimalistas.html" aria-hidden="true" tabindex="-1">
-            <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=900&q=70"
-                 alt="Dormitorio minimalista con paredes claras y decoración sencilla"
-                 width="900" height="675" loading="lazy" decoding="async">
-          </a>
-          <div class="card__body">
-            <span class="card__cat">Dormitorios</span>
-            <h3>
-              <a href="/dormitorios/dormitorios-minimalistas.html">
-                Dormitorios minimalistas que transmiten paz
-              </a>
-            </h3>
-            <p>
-              Menos objetos, más calma. Ideas sencillas para crear un dormitorio
-              despejado, ordenado y profundamente relajante.
-            </p>
-            <a class="card__link" href="/dormitorios/dormitorios-minimalistas.html">
-              Leer artículo <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       BLOQUE EDITORIAL
-       ============================================================ -->
-  <section class="editorial" aria-labelledby="editorial-title">
-    <div class="editorial__grid">
-      <div class="editorial__media">
-        <!-- IMAGEN PROVISIONAL -->
-        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=70"
-             alt="Rincón cálido del salón con sofá, plantas y luz suave de tarde entrando por la ventana"
-             width="1200" height="900" loading="lazy" decoding="async">
-      </div>
-      <div class="editorial__body reveal">
-        <span class="section-label">Manifiesto</span>
-        <h2 id="editorial-title">Menos ruido. Más hogar.</h2>
-        <p>
-          Tu casa no necesita ser perfecta para sentirse especial. A veces basta con
-          una buena iluminación, una textura cálida, un espacio ordenado o ese pequeño
-          detalle que hace que quieras quedarte.
-        </p>
-        <span class="editorial__rule" aria-hidden="true"></span>
-        <p class="editorial__firma">Hogar Inspira</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       ÚLTIMAS IDEAS
-       ============================================================ -->
-  <section class="section" id="ultimas" aria-labelledby="latest-title">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-label">Recién publicado</span>
-        <h2 id="latest-title">Últimas ideas</h2>
-        <p>Inspiración nueva para seguir transformando tu casa, poco a poco.</p>
+        <span class="section-label">Categoría</span>
+        <h2 id="dorm-title">Dormitorios</h2>
+        <p>Ideas para dormitorios pequeños, beige, minimalistas, con madera y cabeceras modernas.</p>
       </div>
 
       <div class="grid grid--3 reveal">
 
         <article class="card">
-          <a class="card__media" href="/dormitorios/cabeceras-modernas.html" aria-hidden="true" tabindex="-1">
-            <img src="https://images.unsplash.com/photo-1616627561950-9f746e330187?auto=format&fit=crop&w=800&q=70"
-                 alt="Dormitorio con cabecero moderno de madera y ropa de cama en tonos neutros"
-                 width="800" height="533" loading="lazy" decoding="async">
-          </a>
-          <div class="card__body">
-            <span class="card__cat">Dormitorios</span>
-            <h3><a href="/dormitorios/cabeceras-modernas.html">Cabeceras modernas para transformar tu dormitorio</a></h3>
-            <p>Una cabecera nueva cambia por completo la sensación del dormitorio.</p>
-            <a class="card__link" href="/dormitorios/cabeceras-modernas.html">Leer más <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-
-        <article class="card">
-          <a class="card__media" href="/dormitorios/dormitorios-con-madera.html" aria-hidden="true" tabindex="-1">
-            <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800&q=70"
-                 alt="Dormitorio con mobiliario de madera natural y textiles en tonos tierra"
-                 width="800" height="533" loading="lazy" decoding="async">
-          </a>
-          <div class="card__body">
-            <span class="card__cat">Dormitorios</span>
-            <h3><a href="/dormitorios/dormitorios-con-madera.html">Dormitorios con madera: calidez que nunca pasa de moda</a></h3>
-            <p>La madera aporta calidez, textura y una elegancia que dura años.</p>
-            <a class="card__link" href="/dormitorios/dormitorios-con-madera.html">Leer más <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-
-        <article class="card">
-          <a class="card__media" href="/dormitorios/dormitorios-beige.html" aria-hidden="true" tabindex="-1">
-            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=70"
-                 alt="Dormitorio beige con textiles de lino y luz natural"
-                 width="800" height="533" loading="lazy" decoding="async">
-          </a>
-          <div class="card__body">
-            <span class="card__cat">Dormitorios</span>
-            <h3><a href="/dormitorios/dormitorios-beige.html">Dormitorios beige: una combinación cálida y elegante</a></h3>
-            <p>Ideas para combinar el beige con maderas y textiles naturales.</p>
-            <a class="card__link" href="/dormitorios/dormitorios-beige.html">Leer más <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-
-        <article class="card">
-          <a class="card__media" href="/dormitorios/dormitorios-minimalistas.html" aria-hidden="true" tabindex="-1">
-            <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=70"
-                 alt="Dormitorio minimalista con decoración sencilla y luz suave"
-                 width="800" height="533" loading="lazy" decoding="async">
-          </a>
-          <div class="card__body">
-            <span class="card__cat">Dormitorios</span>
-            <h3><a href="/dormitorios/dormitorios-minimalistas.html">Dormitorios minimalistas que transmiten paz</a></h3>
-            <p>Menos objetos, más calma: claves para un dormitorio sereno.</p>
-            <a class="card__link" href="/dormitorios/dormitorios-minimalistas.html">Leer más <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-
-        <article class="card">
-          <a class="card__media" href="/dormitorios/dormitorios-pequenos-modernos.html" aria-hidden="true" tabindex="-1">
+          <a class="card__media" href="dormitorios-pequenos-modernos.html" aria-hidden="true" tabindex="-1">
             <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=800&q=70"
-                 alt="Dormitorio pequeño moderno con almacenamiento bajo la cama"
+                 alt="Dormitorio pequeño moderno con cama baja y ropa de cama blanca"
                  width="800" height="533" loading="lazy" decoding="async">
           </a>
           <div class="card__body">
             <span class="card__cat">Dormitorios</span>
-            <h3><a href="/dormitorios/dormitorios-pequenos-modernos.html">27 dormitorios pequeños modernos que parecen de revista</a></h3>
-            <p>Ideas inteligentes para aprovechar cada centímetro.</p>
-            <a class="card__link" href="/dormitorios/dormitorios-pequenos-modernos.html">Leer más <span aria-hidden="true">→</span></a>
+            <h3><a href="dormitorios-pequenos-modernos.html">27 dormitorios pequeños modernos que parecen de revista</a></h3>
+            <p>Ideas para aprovechar cada centímetro.</p>
+            <a class="card__link" href="dormitorios-pequenos-modernos.html">Leer artículo <span aria-hidden="true">→</span></a>
           </div>
         </article>
 
         <article class="card">
-          <a class="card__media" href="/dormitorios/" aria-hidden="true" tabindex="-1">
-            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=70"
-                 alt="Dormitorio luminoso en tonos claros y madera"
+          <a class="card__media" href="dormitorios-beige.html" aria-hidden="true" tabindex="-1">
+            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=70"
+                 alt="Dormitorio beige con textiles naturales y luz cálida"
                  width="800" height="533" loading="lazy" decoding="async">
           </a>
           <div class="card__body">
             <span class="card__cat">Dormitorios</span>
-            <h3><a href="/dormitorios/">Ver todas las ideas para dormitorios</a></h3>
-            <p>Toda la inspiración de dormitorios organizada en un solo lugar.</p>
-            <a class="card__link" href="/dormitorios/">Ir a la categoría <span aria-hidden="true">→</span></a>
+            <h3><a href="dormitorios-beige.html">Dormitorios beige: una combinación cálida y elegante</a></h3>
+            <p>Cómo combinar el beige con madera y lino.</p>
+            <a class="card__link" href="dormitorios-beige.html">Leer artículo <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card__media" href="dormitorios-minimalistas.html" aria-hidden="true" tabindex="-1">
+            <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=70"
+                 alt="Dormitorio minimalista con paredes claras"
+                 width="800" height="533" loading="lazy" decoding="async">
+          </a>
+          <div class="card__body">
+            <span class="card__cat">Dormitorios</span>
+            <h3><a href="dormitorios-minimalistas.html">Dormitorios minimalistas que transmiten paz</a></h3>
+            <p>Menos objetos, más calma.</p>
+            <a class="card__link" href="dormitorios-minimalistas.html">Leer artículo <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card__media" href="dormitorios-con-madera.html" aria-hidden="true" tabindex="-1">
+            <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800&q=70"
+                 alt="Dormitorio con mobiliario de madera natural"
+                 width="800" height="533" loading="lazy" decoding="async">
+          </a>
+          <div class="card__body">
+            <span class="card__cat">Dormitorios</span>
+            <h3><a href="dormitorios-con-madera.html">Dormitorios con madera: calidez que nunca pasa de moda</a></h3>
+            <p>Cómo integrar la madera con estilo.</p>
+            <a class="card__link" href="dormitorios-con-madera.html">Leer artículo <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card__media" href="cabeceras-modernas.html" aria-hidden="true" tabindex="-1">
+            <img src="https://images.unsplash.com/photo-1616627561950-9f746e330187?auto=format&fit=crop&w=800&q=70"
+                 alt="Dormitorio con cabecero moderno de madera"
+                 width="800" height="533" loading="lazy" decoding="async">
+          </a>
+          <div class="card__body">
+            <span class="card__cat">Dormitorios</span>
+            <h3><a href="cabeceras-modernas.html">Cabeceras modernas para transformar tu dormitorio</a></h3>
+            <p>Una cabecera nueva lo cambia todo.</p>
+            <a class="card__link" href="cabeceras-modernas.html">Leer artículo <span aria-hidden="true">→</span></a>
           </div>
         </article>
 
@@ -473,38 +176,43 @@
     </div>
   </section>
 
-  <!-- ADSTERRA — Banner entre secciones -->
-
-  <!-- ============================================================
-       SECCIÓN PINTEREST
-       ============================================================ -->
-  <section class="section section--tight" aria-labelledby="pinterest-title">
+  <section class="section" id="cocinas" aria-labelledby="coc-title">
     <div class="container">
-      <div class="pinterest__inner reveal">
-        <span class="section-label">Para guardar</span>
-        <h2 id="pinterest-title">Guarda tus ideas favoritas</h2>
-        <p>
-          Encuentra inspiración para tu próximo proyecto y guarda tus ideas favoritas
-          para volver a ellas cuando quieras.
-        </p>
-        <a class="btn btn--outline" href="/dormitorios/">Ver más inspiración</a>
+      <div class="section-head reveal">
+        <span class="section-label">Categoría</span>
+        <h2 id="coc-title">Cocinas</h2>
+        <p>Soluciones reales para cocinas pequeñas y modernas.</p>
+      </div>
+
+      <div class="grid grid--3 reveal">
+
+        <article class="card card--featured">
+          <a class="card__media" href="cocinas-modernas-pequenas.html" aria-hidden="true" tabindex="-1">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=900&q=70"
+                 alt="Cocina moderna pequeña con armarios blancos y luz natural"
+                 width="900" height="675" loading="lazy" decoding="async">
+          </a>
+          <div class="card__body">
+            <span class="card__cat">Cocinas</span>
+            <h3><a href="cocinas-modernas-pequenas.html">Cocinas modernas pequeñas: ideas para aprovechar cada espacio</a></h3>
+            <p>Barras, islas, almacenamiento vertical, color y luz.</p>
+            <a class="card__link" href="cocinas-modernas-pequenas.html">Leer artículo <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       NEWSLETTER
-       ============================================================ -->
-  <section class="newsletter" id="newsletter" aria-labelledby="newsletter-title">
+  <section class="newsletter" aria-labelledby="news-title">
     <div class="container">
       <div class="newsletter__inner reveal">
-        <h2 id="newsletter-title">Recibe inspiración para tu hogar</h2>
-        <p>Las mejores ideas de decoración, organización y hogar directamente en tu correo.</p>
+        <h2 id="news-title">Recibe inspiración para tu hogar</h2>
+        <p>Las mejores ideas directamente en tu correo.</p>
 
         <form id="newsletterForm" novalidate>
           <label class="sr-only" for="newsletterEmail">Tu correo electrónico</label>
-          <input type="email" id="newsletterEmail" name="email"
-                 placeholder="Tu correo electrónico" autocomplete="email" required>
+          <input type="email" id="newsletterEmail" placeholder="Tu correo electrónico" required>
           <button class="btn" type="submit">Quiero recibir ideas</button>
         </form>
 
@@ -515,9 +223,6 @@
 
 </main>
 
-<!-- ============================================================
-     FOOTER
-     ============================================================ -->
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -529,22 +234,16 @@
       <nav aria-labelledby="footer-explorar">
         <h3 id="footer-explorar">Explorar</h3>
         <ul class="footer-links">
-          <li><a href="/dormitorios/">Dormitorios</a></li>
-          <li><a href="/cocinas/">Cocinas</a></li>
-          <li><a href="/banos/">Baños</a></li>
-          <li><a href="/jardines/">Jardines</a></li>
-          <li><a href="/organizacion/">Organización</a></li>
-          <li><a href="/espacios-pequenos/">Espacios pequeños</a></li>
+          <li><a href="#dormitorios">Dormitorios</a></li>
+          <li><a href="#cocinas">Cocinas</a></li>
         </ul>
       </nav>
 
       <nav aria-labelledby="footer-info">
         <h3 id="footer-info">Información</h3>
         <ul class="footer-links">
-          <li><a href="/sobre-nosotros/">Sobre nosotros</a></li>
-          <li><a href="/contacto/">Contacto</a></li>
-          <li><a href="/privacidad/">Privacidad</a></li>
-          <li><a href="/terminos/">Términos</a></li>
+          <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -556,32 +255,26 @@
   </div>
 </footer>
 
-<!-- JS compartido -->
-<script src="/js/app.js"></script>
-
-<!-- JS específico de la portada: newsletter -->
+<script src="app.js"></script>
 <script>
 (function () {
-  var form = document.getElementById('newsletterForm');
-  var emailInput = document.getElementById('newsletterEmail');
-  var formMsg = document.getElementById('newsletterMsg');
-  if (!form || !emailInput || !formMsg) return;
-
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    var value = emailInput.value.trim();
-    var esValido = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(value);
-    if (!esValido) {
-      formMsg.textContent = 'Escribe un correo electrónico válido para continuar.';
-      formMsg.className = 'form-msg is-error';
-      emailInput.focus();
+  var f = document.getElementById('newsletterForm'); if (!f) return;
+  var i = document.getElementById('newsletterEmail'); var m = document.getElementById('newsletterMsg');
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = i.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(v)) {
+      m.textContent = 'Escribe un correo electrónico válido.';
+      m.className = 'form-msg is-error';
+      i.focus();
       return;
     }
-    formMsg.textContent = '¡Gracias! Tu suscripción se ha registrado correctamente. Pronto recibirás ideas para tu hogar.';
-    formMsg.className = 'form-msg is-ok';
-    form.reset();
+    m.textContent = '¡Gracias! Pronto recibirás ideas para tu hogar.';
+    m.className = 'form-msg is-ok';
+    f.reset();
   });
 })();
 </script>
+
 </body>
 </html>
