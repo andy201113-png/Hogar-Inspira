@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contacto | Hogar Inspira</title>
-<meta name="description" content="Escríbenos si tienes una sugerencia, una consulta o quieres proponer una colaboración con Hogar Inspira.">
+<title>Sobre nosotros | Hogar Inspira</title>
+<meta name="description" content="Hogar Inspira es una revista digital de decoración e inspiración para el hogar. Conoce nuestro enfoque y qué encontrarás en el sitio.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://hogarinspira.com/contacto/">
+<link rel="canonical" href="https://hogarinspira.com/sobre-nosotros/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Hogar Inspira">
 <meta property="og:locale" content="es_ES">
-<meta property="og:title" content="Contacto | Hogar Inspira">
-<meta property="og:description" content="Escríbenos si tienes una sugerencia o quieres proponer una colaboración.">
-<meta property="og:url" content="https://hogarinspira.com/contacto/">
+<meta property="og:title" content="Sobre nosotros | Hogar Inspira">
+<meta property="og:description" content="Revista digital de decoración e inspiración para el hogar.">
+<meta property="og:url" content="https://hogarinspira.com/sobre-nosotros/">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Contacto | Hogar Inspira">
-<meta name="twitter:description" content="Escríbenos si tienes una sugerencia o quieres proponer una colaboración.">
+<meta name="twitter:title" content="Sobre nosotros | Hogar Inspira">
+<meta name="twitter:description" content="Revista digital de decoración e inspiración para el hogar.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -59,37 +59,49 @@
     <nav class="breadcrumb" aria-label="Ruta de navegación">
       <ol>
         <li><a href="/">Inicio</a></li>
-        <li><span aria-current="page">Contacto</span></li>
+        <li><span aria-current="page">Sobre nosotros</span></li>
       </ol>
     </nav>
   </div>
 
   <section class="legal">
     <div class="legal__body">
-      <span class="section-label">Hablemos</span>
-      <h1>Contacto</h1>
+      <span class="section-label">Quiénes somos</span>
+      <h1>Sobre Hogar Inspira</h1>
 
       <p style="margin-top:22px;">
-        ¿Tienes una sugerencia, quieres proponer una colaboración o simplemente quieres
-        compartir una idea? Escríbenos con el formulario. Respondemos lo antes posible.
+        <strong>Hogar Inspira</strong> es una revista digital de inspiración para el hogar.
+        Nuestra idea es sencilla: reunir ideas claras, visuales y prácticas que ayuden a
+        transformar la casa en un lugar que se sienta realmente propio.
       </p>
 
-      <form class="contact-form" id="contactForm" novalidate style="margin-top:32px;">
-        <div>
-          <label for="contactName">Nombre</label>
-          <input type="text" id="contactName" name="name" autocomplete="name" required>
-        </div>
-        <div>
-          <label for="contactEmail">Correo electrónico</label>
-          <input type="email" id="contactEmail" name="email" autocomplete="email" required>
-        </div>
-        <div>
-          <label for="contactMsg">Mensaje</label>
-          <textarea id="contactMsg" name="message" required></textarea>
-        </div>
-        <button class="btn btn--primary" type="submit">Enviar mensaje</button>
-        <p class="form-msg" id="contactFeedback" role="status" aria-live="polite" style="color:var(--muted);"></p>
-      </form>
+      <p>
+        Publicamos artículos sobre decoración, dormitorios, cocinas, baños, jardines,
+        organización y espacios pequeños. Nos interesan las soluciones reales: lo que
+        se puede aplicar sin grandes obras, sin presupuestos enormes y sin complicarse
+        la vida.
+      </p>
+
+      <h2>Nuestro enfoque</h2>
+      <p>
+        Creemos que un hogar no tiene que ser perfecto para sentirse especial. A veces
+        basta con una buena luz, un espacio ordenado, un material cálido o ese pequeño
+        detalle que hace que quieras quedarte. Trabajamos a partir de esa idea.
+      </p>
+
+      <h2>Cómo trabajamos</h2>
+      <ul>
+        <li>Contenido pensado para leerse bien en el móvil.</li>
+        <li>Imágenes cuidadas, porque la inspiración visual importa.</li>
+        <li>Sin pop-ups agresivos ni publicidad invasiva.</li>
+        <li>Enlaces internos que invitan a seguir explorando.</li>
+      </ul>
+
+      <h2>Contacto</h2>
+      <p>
+        Si quieres escribirnos, puedes hacerlo desde la página de
+        <a href="/contacto/">contacto</a>.
+      </p>
     </div>
   </section>
 </main>
@@ -125,25 +137,5 @@
 </footer>
 
 <script src="/js/app.js"></script>
-<script>
-(function () {
-  var f = document.getElementById('contactForm'); if (!f) return;
-  var fb = document.getElementById('contactFeedback');
-  f.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var n = document.getElementById('contactName').value.trim();
-    var em = document.getElementById('contactEmail').value.trim();
-    var ms = document.getElementById('contactMsg').value.trim();
-    if (!n || !/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(em) || !ms) {
-      fb.textContent = 'Revisa los campos: nombre, correo válido y mensaje.';
-      fb.style.color = '#B07A5C';
-      return;
-    }
-    fb.textContent = '¡Gracias! Hemos recibido tu mensaje. Te responderemos lo antes posible.';
-    fb.style.color = '#94603F';
-    f.reset();
-  });
-})();
-</script>
 </body>
 </html>
