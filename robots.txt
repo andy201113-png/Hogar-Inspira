@@ -1,0 +1,6 @@
+# Hogar Inspira — robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://hogarinspira.com/sitemap.xml
