@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacidad | Hogar Inspira</title>
-<meta name="description" content="Política de privacidad de Hogar Inspira: qué datos tratamos, cómo los usamos y qué derechos tienes.">
+<title>Contacto | Hogar Inspira</title>
+<meta name="description" content="Escríbenos si tienes una sugerencia, una consulta o quieres proponer una colaboración con Hogar Inspira.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://hogarinspira.com/privacidad/">
+<link rel="canonical" href="https://hogarinspira.com/contacto/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Hogar Inspira">
 <meta property="og:locale" content="es_ES">
-<meta property="og:title" content="Privacidad | Hogar Inspira">
-<meta property="og:description" content="Política de privacidad de Hogar Inspira.">
-<meta property="og:url" content="https://hogarinspira.com/privacidad/">
+<meta property="og:title" content="Contacto | Hogar Inspira">
+<meta property="og:description" content="Escríbenos si tienes una sugerencia o quieres proponer una colaboración.">
+<meta property="og:url" content="https://hogarinspira.com/contacto/">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Privacidad | Hogar Inspira">
-<meta name="twitter:description" content="Política de privacidad de Hogar Inspira.">
+<meta name="twitter:title" content="Contacto | Hogar Inspira">
+<meta name="twitter:description" content="Escríbenos si tienes una sugerencia o quieres proponer una colaboración.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -59,63 +59,37 @@
     <nav class="breadcrumb" aria-label="Ruta de navegación">
       <ol>
         <li><a href="/">Inicio</a></li>
-        <li><span aria-current="page">Privacidad</span></li>
+        <li><span aria-current="page">Contacto</span></li>
       </ol>
     </nav>
   </div>
 
   <section class="legal">
     <div class="legal__body">
-      <span class="section-label">Legal</span>
-      <h1>Política de privacidad</h1>
+      <span class="section-label">Hablemos</span>
+      <h1>Contacto</h1>
 
       <p style="margin-top:22px;">
-        En Hogar Inspira respetamos tu privacidad. Esta página explica, de forma sencilla,
-        qué datos podemos tratar cuando visitas el sitio y cómo los utilizamos.
+        ¿Tienes una sugerencia, quieres proponer una colaboración o simplemente quieres
+        compartir una idea? Escríbenos con el formulario. Respondemos lo antes posible.
       </p>
 
-      <h2>Qué datos recogemos</h2>
-      <p>
-        Actualmente este sitio no dispone de backend propio ni base de datos. No
-        almacenamos los correos introducidos en el formulario de newsletter: el
-        formulario es una demostración visual.
-      </p>
-      <p>
-        Como la mayoría de sitios web, podemos recibir información técnica básica
-        (dirección IP, navegador, páginas visitadas) a través de los servicios de
-        analítica o publicidad que se incorporen en el futuro.
-      </p>
-
-      <h2>Publicidad</h2>
-      <p>
-        En el futuro, este sitio podrá mostrar publicidad servida por terceros
-        (por ejemplo, Adsterra). Estos proveedores pueden usar cookies o tecnologías
-        similares para mostrar anuncios. Cuando eso ocurra, actualizaremos esta
-        política para reflejarlo.
-      </p>
-
-      <h2>Cookies</h2>
-      <p>
-        Este sitio puede usar cookies técnicas necesarias para su funcionamiento y,
-        en el futuro, cookies de terceros vinculadas a publicidad o analítica.
-      </p>
-
-      <h2>Tus derechos</h2>
-      <ul>
-        <li>Acceder a la información que podamos tener sobre ti.</li>
-        <li>Solicitar su rectificación o supresión.</li>
-        <li>Oponerte a su tratamiento.</li>
-      </ul>
-      <p>
-        Puedes ejercer estos derechos escribiéndonos desde la página de
-        <a href="/contacto/">contacto</a>.
-      </p>
-
-      <h2>Cambios en esta política</h2>
-      <p>
-        Esta política puede actualizarse para adaptarse a cambios legales o técnicos.
-        Recomendamos revisarla periódicamente.
-      </p>
+      <form class="contact-form" id="contactForm" novalidate style="margin-top:32px;">
+        <div>
+          <label for="contactName">Nombre</label>
+          <input type="text" id="contactName" name="name" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="contactEmail">Correo electrónico</label>
+          <input type="email" id="contactEmail" name="email" autocomplete="email" required>
+        </div>
+        <div>
+          <label for="contactMsg">Mensaje</label>
+          <textarea id="contactMsg" name="message" required></textarea>
+        </div>
+        <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+        <p class="form-msg" id="contactFeedback" role="status" aria-live="polite" style="color:var(--muted);"></p>
+      </form>
     </div>
   </section>
 </main>
@@ -151,5 +125,25 @@
 </footer>
 
 <script src="/js/app.js"></script>
+<script>
+(function () {
+  var f = document.getElementById('contactForm'); if (!f) return;
+  var fb = document.getElementById('contactFeedback');
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var n = document.getElementById('contactName').value.trim();
+    var em = document.getElementById('contactEmail').value.trim();
+    var ms = document.getElementById('contactMsg').value.trim();
+    if (!n || !/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(em) || !ms) {
+      fb.textContent = 'Revisa los campos: nombre, correo válido y mensaje.';
+      fb.style.color = '#B07A5C';
+      return;
+    }
+    fb.textContent = '¡Gracias! Hemos recibido tu mensaje. Te responderemos lo antes posible.';
+    fb.style.color = '#94603F';
+    f.reset();
+  });
+})();
+</script>
 </body>
 </html>
